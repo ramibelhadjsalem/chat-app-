@@ -103,8 +103,7 @@ public class SocketIOController {
     public DisconnectListener onUserDisconnectWithSocket = new DisconnectListener() {
         @Override
         public void onDisconnect(SocketIOClient client) {
-           /* DefaultHttpHeaders headers = (DefaultHttpHeaders) client.getHandshakeData().getHttpHeaders();
-            String jwt = headers.get("Authorization");*/
+
 
             try {
                 String jwt=client.getHandshakeData().getSingleUrlParam("Authorization");

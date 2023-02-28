@@ -1,0 +1,43 @@
+.side-menu {
+    background-color: var(--background-2);
+    box-shadow: 0 2px 4px rgba(15, 34, 58, .12);
+
+    .logo {
+        font-size: 30px;
+        color: var(--purple);
+        font-weight: 600;
+    }
+    .menu{
+        a{
+            font-size: 25px;
+            color: var(--grey);
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            &:hover{
+                background-color: var(--background-1);
+            }
+            &.active{
+                background-color: var(--background-1);
+            }
+        }
+        
+    }
+
+
+}
+
+@media screen and (min-width: 991px) {
+    .side-menu {
+        height: 100vh;
+        width: 70px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .side-menu {
+        height: 70px;
+        max-height: 70px;
+        align-self: flex-end;
+    }
+}

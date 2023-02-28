@@ -1,0 +1,82 @@
+.title {
+    font-size: 30px;
+}
+
+.find {
+    background-color: var(--background-1);
+    border-radius: 5px;
+    overflow: hidden;
+
+    input {
+        height: 30px;
+        all: unset;
+        padding-left: 10px;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+
+    span {
+        padding: 10px;
+        width: 40px;
+        text-align: center;
+        background-color: var(--background-2);
+        cursor: pointer;
+    }
+}
+
+.list-connected {
+   .list{
+    padding-top: 50px;
+        flex: 1 1 0;
+        overflow-x: scroll;
+        scrollbar-width: thin;
+   }
+
+    .item {
+        width: 100px;
+        min-width: 100px;
+        background-color: var(--background-1);
+        padding: 10px 15px;
+        text-align: center;
+        border-radius: 5px;
+        position: relative;
+
+        .avatar-xs {
+            position: absolute;
+            top: -30px;
+            right: 25px;
+
+            img {
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+
+            }
+
+           
+        }
+        &.active{
+            span {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: var(--green);
+                z-index: 200;
+                position: absolute;
+                top: 35px;
+                left: 40px;
+            }
+        }
+    }
+}
+
+.chat-list {
+    flex: 1;
+    .chat-title {
+        font-size: 20px;
+    }
+    .list{
+        flex: 1 1 0;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+    }
+}

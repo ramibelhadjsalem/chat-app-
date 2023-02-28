@@ -1,0 +1,16 @@
+.chat-user-img{
+    img{
+        height: 50px;
+        width: 50px;
+    }
+}
+.d-flex{
+    border-radius: 4px;
+    padding: 10px 20px;
+    &:hover{
+        background-color: var(--background-2);
+    }
+    p{
+        color: var(--grey);
+    }
+}

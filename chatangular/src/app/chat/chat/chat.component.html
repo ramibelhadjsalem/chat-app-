@@ -1,0 +1,35 @@
+<div class="container-fluid p-3 h-100 d-flex flex-column">
+    <div class="title mb-3">
+        Chat
+    </div>
+    <div class="find d-flex align-items-center">
+        <span><i class="bi bi-search"></i></span>
+        <input type="text" placeholder="Search for Users or messages">
+    </div>
+    <div class="list-connected ">
+        <div class="list d-flex flex-nowrap ">
+            <div class="item me-2 active" *ngFor="let user of usersConnected |async">
+                <div class="avatar-xs ">
+                    <img src={{user.userimg}}
+                        alt="user-img" class="img-fluid rounded-circle ">
+                    <span class="user-status">
+                    </span>
+                </div>
+                <h5 class="font-size-13 text-truncate mt-3 mb-1 snipcss0-9-23-27">
+                   {{user.username}}
+                </h5>
+            </div>
+        </div>
+       
+    </div>
+    <div class="chat-list mt-3 d-flex flex-column">
+        <div class="chat-title">
+          Recent
+        </div>
+        <div class="list">
+            <app-room-item *ngFor="let _ of [].constructor(20)"/>
+        </div>
+
+    </div>
+
+</div>
